@@ -1,0 +1,221 @@
+
+/* 바디갚에 잡혀있는 마진 때문에 생기는 여백 없애기 */
+
+body {
+    margin: 83px 0px 0px 0px;
+    font-family: Montserrat;
+}
+/* 제일 위에 고정되어서 항상 따라다니는 애 */
+#box-top{
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    background-color: #f9e2c9;
+    border: 3px solid #3c606b;
+    width: 100%;
+    z-index:100;
+}
+
+.name{
+    background-color: #f6bab6;
+    border-right: 3px solid #3c606b; 
+    color: #444362;
+
+}
+h1 {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1px 50px 1px 50px; 
+}
+.button-top {
+    display: flex;
+    width: 75%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.homepage button, .aboutme button{
+    display: flex; 
+    all: unset;
+    background-color: #f9e2c9;
+    margin: 0px 20px;
+    padding: 20px;
+    color: #444362;
+}
+
+/* 첫번째 줄 내용 = 내 사진, 내 소개, 좋아하는 것 */
+.first-line{
+    display: flex;
+    background-color: #f9e2c9;
+    border: 2px solid #3c606b;
+    margin: 0px;
+    width: 1440px;
+    height: 600px;
+    left: 0px;
+    padding: 0px;
+}
+.myimg img {
+    border-right: 3px solid #3c606b; 
+    width: 700px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 40px 80px 40px 80px;
+    padding-top: 80px;
+    text-align: center;
+    color: #444362;
+}
+
+a.aboutmeclick{
+    all: unset;
+}
+div.like {
+    background-image: url(/Users/summer/Desktop/wecode/img/4fab79322cfbe18f449d123b7f1d02b91882a207f7e3161cdc2c007ef307ad5b_v1.jpg);
+    background-position: center top;
+    background-size: 500px 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-left: 3px solid #3c606b;
+    width: 440px; 
+    /* max-width: 500px; max-height: 600px; */
+}
+#ilike{
+    display: flex;
+    /* justify-content: center; */
+    color: #1586af;
+    font-size: 24px;
+    all: unset;
+    padding: 0px 80px;
+    margin: 40px 80px 40px 80px;
+
+}
+
+/* 두번째 줄 내용 = 연락, 취미, 가을 겨울이 */
+.second-line{
+    display: flex;
+    background-color: #f9e2c9;
+    border: 2px solid #3c606b;
+    margin: 0px;
+    width: 1440px;
+    height: 700px;
+    left: 0px;
+    padding: 0px;
+}
+.Contect{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-right: 3px solid #3c606b; 
+    padding: 200px 20px 200px 60px;
+    width: 50%;
+    font-size: 18px;
+    color: #1264bf;
+    text-align: left;
+}
+/* 취미 이미지 넘기며 보기 - 코드 출처: 개발자 황준일 블로그(http://junil-hwang.com/blog/only-css-slide/) */
+ul,li{list-style:none; margin: 0px; padding: 0px;}
+
+#slide{width: 600px;height:700px; position:relative; overflow:hidden; }
+#slide ul{width:400%; height:100%; transition:1s;}
+#slide ul:after{content:""; display:block; clear:both;}
+#slide li{float:left; width:600px; height:100%;}
+#slide li:nth-child(1){
+    background: #f6bab6;
+    background-position: center; 
+    background-size: 600px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444362;
+    font-size: 24px;
+    }
+#slide li:nth-child(2){
+    background: url(/Users/summer/Desktop/wecode/img/k.png);
+    background-position: center top; 
+    background-size: 600px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c3c3c3;
+    font-size: 24px;
+    }
+#slide li:nth-child(3){
+    background: url(/Users/summer/Desktop/wecode/img/20190814_021047.jpg); 
+    background-position: center; 
+    background-size: 600px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c3c3c3;
+    font-size: 24px;
+    }
+#slide li:nth-child(4){
+    background:url(/Users/summer/Desktop/wecode/img/c.png);
+    background-position: left; 
+    background-size: 600px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c3c3c3;
+    font-size: 24px;
+    }
+#slide input{display:none;}
+#slide label{display:inline-block;vertical-align:middle;width:10px;height:10px;border:2px solid #666;background:#fff;transition:0.3s;border-radius:50%;cursor:pointer;}
+#slide .pos{text-align:center;position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
+  /* 슬라이드 버튼 스타일 */
+#pos1:checked~ul{margin-left:0%;}
+#pos2:checked~ul{margin-left:-100%;}
+#pos3:checked~ul{margin-left:-200%;}
+#pos4:checked~ul{margin-left:-300%;}
+
+#pos1:checked~.pos>label:nth-child(1){background:#666;}
+#pos2:checked~.pos>label:nth-child(2){background:#666;}
+#pos3:checked~.pos>label:nth-child(3){background:#666;}
+#pos4:checked~.pos>label:nth-child(4){background:#666;}
+
+
+a.aboutmeclick{
+    all: unset;
+}
+div.Pats {
+    background-image: url(/Users/summer/Desktop/wecode/img/fallwin.png);
+    background-position: center top;
+    background-size: 100% auto;
+    text-align: center;
+    color: #3c606b;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-left: 3px solid #3c606b;
+    width: 100%;
+}
+.auwin{
+    all: unset;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+.patsin{
+    background-color: white;
+    filter: alpha(opacity=80);
+    opacity: 0.7;
+    width: 100%;
+    padding: 30px 20px;
+}
+/* 반응형 넣기 ..! */
+/* @media(max-width:1050px) {
+    .first-line{
+        border: block;
+    }
+} */
